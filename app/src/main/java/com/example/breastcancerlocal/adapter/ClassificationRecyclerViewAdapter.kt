@@ -6,14 +6,14 @@ import android.view.ViewGroup
 import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
 import com.example.breastcancerlocal.R
-import com.example.breastcancerlocal.fragments.listFragment
+import com.example.breastcancerlocal.fragments.ListFragment
 import com.example.breastcancerlocal.model.HeartDiseaseVO
 
-class ClassificationRecyclerViewAdapter(items: List<HeartDiseaseVO>, listener: listFragment.OnListFragmentInteractionListener)
+class ClassificationRecyclerViewAdapter(items: List<HeartDiseaseVO>, listener: ListFragment.OnListFragmentInteractionListener)
     : RecyclerView.Adapter<ClassificationRecyclerViewAdapter.ViewHolder>() {
 
     private var mValues: List<HeartDiseaseVO> = items
-    private var mListener: listFragment.OnListFragmentInteractionListener = listener
+    private var mListener: ListFragment.OnListFragmentInteractionListener = listener
 
     // Returns a new ViewHolder
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ViewHolder {
