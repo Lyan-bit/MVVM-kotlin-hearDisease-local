@@ -5,11 +5,11 @@ import android.os.Bundle
 import androidx.viewpager.widget.ViewPager
 import com.example.HeartDiseaselocal.viewModel.HeartDiseaseCRUDViewModel
 import com.example.breastcancerlocal.adapter.SectionsPagerAdapter
-import com.example.breastcancerlocal.fragments.listFragment
+import com.example.breastcancerlocal.fragments.ListFragment
 import com.example.breastcancerlocal.model.HeartDiseaseVO
 import com.google.android.material.tabs.TabLayout
 
-class MainActivity : AppCompatActivity(), listFragment.OnListFragmentInteractionListener {
+class MainActivity : AppCompatActivity(), ListFragment.OnListFragmentInteractionListener {
 
     private lateinit var model: HeartDiseaseCRUDViewModel
 
