@@ -36,21 +36,21 @@ class HeartDiseaseCRUDViewModel constructor(context: Context): ViewModel() {
         } else {
             val vo: HeartDiseaseVO = res[0]
             val itemx = HeartDisease.createByPKHeartDisease(value)
-            itemx.id = vo.getId()
-            itemx.age = vo.getAge()
-            itemx.sex = vo.getSex()
-            itemx.cp = vo.getCp()
-            itemx.trestbps = vo.getRestecg()
-            itemx.chol = vo.getChol()
-            itemx.fbs = vo.getFbs()
-            itemx.restecg = vo.getRestecg()
-            itemx.thalach = vo.getThalach()
-            itemx.exang = vo.getExang()
-            itemx.oldpeak = vo.getOldpeak()
-            itemx.slope = vo.getSlope()
-            itemx.ca = vo.getCa()
-            itemx.thal = vo.getThal()
-            itemx.outcome = vo.getOutcome()
+            itemx.id = vo.id
+            itemx.age = vo.age
+            itemx.sex = vo.sex
+            itemx.cp = vo.cp
+            itemx.trestbps = vo.trestbps
+            itemx.chol = vo.chol
+            itemx.fbs = vo.fbs
+            itemx.restecg = vo.restecg
+            itemx.thalach = vo.thalach
+            itemx.exang = vo.exang
+            itemx.oldpeak = vo.oldpeak
+            itemx.slope = vo.slope
+            itemx.ca = vo.ca
+            itemx.thal = vo.thal
+            itemx.outcome = vo.outcome
             itemx
         }
     }
@@ -63,7 +63,7 @@ class HeartDiseaseCRUDViewModel constructor(context: Context): ViewModel() {
         currentHeartDiseases = dbm.listHeartDisease()
         val res: ArrayList<String> = ArrayList()
         for (HeartDisease in currentHeartDiseases.indices) {
-            res.add(currentHeartDiseases[HeartDisease].getId())
+            res.add(currentHeartDiseases[HeartDisease].id)
         }
         return res
     }
@@ -72,7 +72,7 @@ class HeartDiseaseCRUDViewModel constructor(context: Context): ViewModel() {
         currentHeartDiseases = dbm.listHeartDisease()
         val res: ArrayList<String> = ArrayList()
         for (HeartDisease in currentHeartDiseases.indices) {
-            res.add(currentHeartDiseases[HeartDisease].getAge().toString())
+            res.add(currentHeartDiseases[HeartDisease].age.toString())
         }
         return res
     }
@@ -81,7 +81,7 @@ class HeartDiseaseCRUDViewModel constructor(context: Context): ViewModel() {
         currentHeartDiseases = dbm.listHeartDisease()
         val res: ArrayList<String> = ArrayList()
         for (HeartDisease in currentHeartDiseases.indices) {
-            res.add(currentHeartDiseases[HeartDisease].getSex().toString())
+            res.add(currentHeartDiseases[HeartDisease].sex.toString())
         }
         return res
     }
@@ -90,7 +90,7 @@ class HeartDiseaseCRUDViewModel constructor(context: Context): ViewModel() {
         currentHeartDiseases = dbm.listHeartDisease()
         val res: ArrayList<String> = ArrayList()
         for (HeartDisease in currentHeartDiseases.indices) {
-            res.add(currentHeartDiseases[HeartDisease].getCp().toString())
+            res.add(currentHeartDiseases[HeartDisease].cp.toString())
         }
         return res
     }
@@ -99,7 +99,7 @@ class HeartDiseaseCRUDViewModel constructor(context: Context): ViewModel() {
         currentHeartDiseases = dbm.listHeartDisease()
         val res: ArrayList<String> = ArrayList()
         for (HeartDisease in currentHeartDiseases.indices) {
-            res.add(currentHeartDiseases[HeartDisease].getTrestbps().toString())
+            res.add(currentHeartDiseases[HeartDisease].trestbps.toString())
         }
         return res
     }
@@ -108,7 +108,7 @@ class HeartDiseaseCRUDViewModel constructor(context: Context): ViewModel() {
         currentHeartDiseases = dbm.listHeartDisease()
         val res: ArrayList<String> = ArrayList()
         for (HeartDisease in currentHeartDiseases.indices) {
-            res.add(currentHeartDiseases[HeartDisease].getChol().toString())
+            res.add(currentHeartDiseases[HeartDisease].chol.toString())
         }
         return res
     }
@@ -117,7 +117,7 @@ class HeartDiseaseCRUDViewModel constructor(context: Context): ViewModel() {
         currentHeartDiseases = dbm.listHeartDisease()
         val res: ArrayList<String> = ArrayList()
         for (HeartDisease in currentHeartDiseases.indices) {
-            res.add(currentHeartDiseases[HeartDisease].getFbs().toString())
+            res.add(currentHeartDiseases[HeartDisease].fbs.toString())
         }
         return res
     }
@@ -126,7 +126,7 @@ class HeartDiseaseCRUDViewModel constructor(context: Context): ViewModel() {
         currentHeartDiseases = dbm.listHeartDisease()
         val res: ArrayList<String> = ArrayList()
         for (HeartDisease in currentHeartDiseases.indices) {
-            res.add(currentHeartDiseases[HeartDisease].getRestecg().toString())
+            res.add(currentHeartDiseases[HeartDisease].restecg.toString())
         }
         return res
     }
@@ -135,7 +135,7 @@ class HeartDiseaseCRUDViewModel constructor(context: Context): ViewModel() {
         currentHeartDiseases = dbm.listHeartDisease()
         val res: ArrayList<String> = ArrayList()
         for (HeartDisease in currentHeartDiseases.indices) {
-            res.add(currentHeartDiseases[HeartDisease].getThalach().toString())
+            res.add(currentHeartDiseases[HeartDisease].thalach.toString())
         }
         return res
     }
@@ -144,7 +144,7 @@ class HeartDiseaseCRUDViewModel constructor(context: Context): ViewModel() {
         currentHeartDiseases = dbm.listHeartDisease()
         val res: ArrayList<String> = ArrayList()
         for (HeartDisease in currentHeartDiseases.indices) {
-            res.add(currentHeartDiseases[HeartDisease].getExang().toString())
+            res.add(currentHeartDiseases[HeartDisease].exang.toString())
         }
         return res
     }
@@ -153,7 +153,7 @@ class HeartDiseaseCRUDViewModel constructor(context: Context): ViewModel() {
         currentHeartDiseases = dbm.listHeartDisease()
         val res: ArrayList<String> = ArrayList()
         for (HeartDisease in currentHeartDiseases.indices) {
-            res.add(currentHeartDiseases[HeartDisease].getOldpeak().toString())
+            res.add(currentHeartDiseases[HeartDisease].oldpeak.toString())
         }
         return res
     }
@@ -162,7 +162,7 @@ class HeartDiseaseCRUDViewModel constructor(context: Context): ViewModel() {
         currentHeartDiseases = dbm.listHeartDisease()
         val res: ArrayList<String> = ArrayList()
         for (HeartDisease in currentHeartDiseases.indices) {
-            res.add(currentHeartDiseases[HeartDisease].getSlope().toString())
+            res.add(currentHeartDiseases[HeartDisease].slope.toString())
         }
         return res
     }
@@ -171,7 +171,7 @@ class HeartDiseaseCRUDViewModel constructor(context: Context): ViewModel() {
         currentHeartDiseases = dbm.listHeartDisease()
         val res: ArrayList<String> = ArrayList()
         for (HeartDisease in currentHeartDiseases.indices) {
-            res.add(currentHeartDiseases[HeartDisease].getCa().toString())
+            res.add(currentHeartDiseases[HeartDisease].ca.toString())
         }
         return res
     }
@@ -180,7 +180,7 @@ class HeartDiseaseCRUDViewModel constructor(context: Context): ViewModel() {
         currentHeartDiseases = dbm.listHeartDisease()
         val res: ArrayList<String> = ArrayList()
         for (HeartDisease in currentHeartDiseases.indices) {
-            res.add(currentHeartDiseases[HeartDisease].getThal().toString())
+            res.add(currentHeartDiseases[HeartDisease].thal.toString())
         }
         return res
     }
@@ -189,7 +189,7 @@ class HeartDiseaseCRUDViewModel constructor(context: Context): ViewModel() {
         currentHeartDiseases = dbm.listHeartDisease()
         val res: ArrayList<String> = ArrayList()
         for (HeartDisease in currentHeartDiseases.indices) {
-            res.add(currentHeartDiseases[HeartDisease].getOutcome().toString())
+            res.add(currentHeartDiseases[HeartDisease].outcome.toString())
         }
         return res
     }
